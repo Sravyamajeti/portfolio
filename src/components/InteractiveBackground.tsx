@@ -41,29 +41,57 @@ export default function InteractiveBackground({ activeSection }: InteractiveBack
     const style = getBrushStyle(activeSection);
 
     useEffect(() => {
+        // Helper function to add points
+        const addPoint = (x: number, y: number) => {
+            if (!activeSection) return;
+
+            const codeChars = ['{', '}', '<', '>', ';', 'const', 'let', 'fn', '=>', '0', '1'];
+            const codeColors = ['#FF0055', '#0099FF', '#00CC66', '#FFCC00', '#FF6600']; // Syntax highlight colors
+
+            const newPoint: Point = {
+                x,
+                y,
+                age: 0,
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                char: style === 'code' ? codeChars[Math.floor(Math.random() * codeChars.length)] : undefined,
+                color: style === 'code' ? codeColors[Math.floor(Math.random() * codeColors.length)] : undefined,
+            };
+            pointsRef.current.push(newPoint);
+        };
+
         const handleMouseMove = (e: MouseEvent) => {
             mouseRef.current = { x: e.clientX, y: e.clientY };
+            addPoint(e.clientX, e.clientY);
+        };
 
-            // Add points on move
-            if (activeSection) {
-                const codeChars = ['{', '}', '<', '>', ';', 'const', 'let', 'fn', '=>', '0', '1'];
-                const codeColors = ['#FF0055', '#0099FF', '#00CC66', '#FFCC00', '#FF6600']; // Syntax highlight colors
+        const handleTouchMove = (e: TouchEvent) => {
+            // Prevent scrolling while drawing
+            if (e.touches.length > 0) {
+                const touch = e.touches[0];
+                mouseRef.current = { x: touch.clientX, y: touch.clientY };
+                addPoint(touch.clientX, touch.clientY);
+            }
+        };
 
-                const newPoint: Point = {
-                    x: e.clientX,
-                    y: e.clientY,
-                    age: 0,
-                    vx: (Math.random() - 0.5) * 2,
-                    vy: (Math.random() - 0.5) * 2,
-                    char: style === 'code' ? codeChars[Math.floor(Math.random() * codeChars.length)] : undefined,
-                    color: style === 'code' ? codeColors[Math.floor(Math.random() * codeColors.length)] : undefined,
-                };
-                pointsRef.current.push(newPoint);
+        const handleTouchStart = (e: TouchEvent) => {
+            // Add point on initial touch
+            if (e.touches.length > 0) {
+                const touch = e.touches[0];
+                mouseRef.current = { x: touch.clientX, y: touch.clientY };
+                addPoint(touch.clientX, touch.clientY);
             }
         };
 
         window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        window.addEventListener('touchmove', handleTouchMove, { passive: true });
+        window.addEventListener('touchstart', handleTouchStart, { passive: true });
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchstart', handleTouchStart);
+        };
     }, [activeSection, style]);
 
     useEffect(() => {
