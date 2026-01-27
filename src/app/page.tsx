@@ -82,7 +82,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-neutral-100">
               <div className="text-4xl font-bold text-indigo-600 mb-2">$800K+</div>
-              <div className="text-sm text-neutral-600 font-medium">ARR</div>
+              <div className="text-sm text-neutral-600 font-medium">ARR Generated</div>
             </div>
             <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-neutral-100">
               <div className="text-4xl font-bold text-purple-600 mb-2">1.5M</div>
@@ -117,7 +117,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-4xl font-bold md:text-5xl">Vibe Coding Projects</h2>
-            <p className="text-lg text-neutral-600">Building cool stuff with AI & Cursor</p>
+            <p className="text-lg text-neutral-600">Building cool stuff with AI</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -322,7 +322,7 @@ export default function Home() {
           </div>
 
           <footer className="pt-24 text-neutral-400 text-sm">
-            © {new Date().getFullYear()} Sravya Majeti. Built with Next.js, Tailwind, & Vibe Coding.
+            © {new Date().getFullYear()} Sravya Majeti. Built with Next.js, Tailwind, & Framer Motion.
           </footer>
         </div>
       </section>

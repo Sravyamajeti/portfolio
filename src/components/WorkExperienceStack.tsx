@@ -15,6 +15,7 @@ const experiences = [
         //     }
         // ],
         description: "Built the product from 0 -> $800k ARR, achieving 80% retention by deeply understanding and solving marketer pain points. Led critical AI initiatives including Brand Safety and Natural Language-based Creator Discovery empowering brands to find relevant creators instantly",
+        color: "bg-purple-100",
         hoverColor: "group-hover:bg-purple-200",
         textColor: "text-purple-600",
         accent: "bg-purple-500",

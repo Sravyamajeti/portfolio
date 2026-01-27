@@ -70,6 +70,7 @@ const MEMOJI_CONFIG: Record<string, { state: MemojiState; color: string; emoji: 
 
 export default function MemojiGuide({ activeSection, onStartTour }: MemojiGuideProps) {
     const [isWelcomeActive, setIsWelcomeActive] = React.useState(true);
+    const [isScrollLocked, setIsScrollLocked] = React.useState(true);
     const [isMobile, setIsMobile] = React.useState(false);
 
     // Check for mobile on mount/resize
@@ -80,17 +81,62 @@ export default function MemojiGuide({ activeSection, onStartTour }: MemojiGuideP
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const handleCtaClick = () => {
+    // Helper to dismiss splash and unlock scroll after animation
+    const dismissSplash = () => {
+        if (!isWelcomeActive) return;
         setIsWelcomeActive(false);
         onStartTour();
+
+        // Keep scroll locked during exit animation (800ms) to absorb momentum
+        setTimeout(() => {
+            setIsScrollLocked(false);
+        }, 800);
+    };
+
+    const handleCtaClick = () => {
+        dismissSplash();
     };
 
     // If section changes from hero (user scrolled manually), dismiss welcome
     React.useEffect(() => {
-        if (activeSection !== 'hero') {
+        if (activeSection !== 'hero' && isWelcomeActive) {
+            // Even if we auto-dismiss, we should respect the lock timing
             setIsWelcomeActive(false);
+            setTimeout(() => setIsScrollLocked(false), 800);
         }
-    }, [activeSection]);
+    }, [activeSection, isWelcomeActive]);
+
+    // Intercept scroll to dismiss welcome without scrolling page
+    React.useEffect(() => {
+        if (!isWelcomeActive) return;
+
+        const handleScrollAttempt = (e: Event) => {
+            // Prevent default scroll to stop background movement
+            if (e.cancelable) e.preventDefault();
+            dismissSplash();
+        };
+
+        // Add non-passive listeners to allow preventing default scroll
+        window.addEventListener('wheel', handleScrollAttempt, { passive: false });
+        window.addEventListener('touchmove', handleScrollAttempt, { passive: false });
+
+        return () => {
+            window.removeEventListener('wheel', handleScrollAttempt);
+            window.removeEventListener('touchmove', handleScrollAttempt);
+        };
+    }, [isWelcomeActive]);
+
+    // Lock body scroll when locked state is true
+    React.useEffect(() => {
+        if (isScrollLocked) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isScrollLocked]);
 
     // Config for the persistent guide (based on active section)
     const persistentConfig = MEMOJI_CONFIG[activeSection] || MEMOJI_CONFIG.hero;
