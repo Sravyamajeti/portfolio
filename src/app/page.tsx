@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import MemojiGuide from "@/components/MemojiGuide";
+import ResumeButton from "@/components/ResumeButton";
 import { motion } from "framer-motion";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Mail, Linkedin, Gamepad2, ArrowDown } from "lucide-react";
@@ -41,6 +42,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-neutral-50 text-neutral-900 font-sans">
+      <ResumeButton />
       <InteractiveBackground key={activeSection} activeSection={activeSection} />
       <MemojiGuide
         activeSection={activeSection}

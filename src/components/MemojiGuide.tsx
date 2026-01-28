@@ -249,8 +249,8 @@ export default function MemojiGuide({ activeSection, onStartTour }: MemojiGuideP
                                             : `border-4 border-white shadow-2xl rounded-full ${persistentConfig.color}`
                                             }`}
                                         style={{
-                                            width: isMobile ? '80px' : '96px',
-                                            height: isMobile ? '80px' : '96px',
+                                            width: isMobile ? '90px' : '144px',
+                                            height: isMobile ? '90px' : '144px',
                                         }}
                                     >
                                         {persistentConfig.image ? (
