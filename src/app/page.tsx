@@ -22,8 +22,8 @@ export default function Home() {
         });
       },
       {
-        threshold: 0.3, // Trigger when 30% of the section is visible
-        rootMargin: "-10% 0px -10% 0px" // Shrink the detection area slightly
+        threshold: 0.2, // Trigger when 20% of the section is visible (better for mobile)
+        rootMargin: "-5% 0px -5% 0px" // Less aggressive margin for mobile compatibility
       }
     );
 
@@ -171,7 +171,7 @@ export default function Home() {
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Antigravity</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Vercel</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">NotebookLM</span>
-                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Strapi</span>
+                {/* <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Strapi</span> */}
               </div>
               <a
                 href="https://dmv-practice-quiz.vercel.app/"
