@@ -218,8 +218,7 @@ export default function MemojiGuide({ activeSection, onStartTour }: MemojiGuideP
                                     animate={{ opacity: 1, scale: 1, x: 0 }}
                                     exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                                    className={`mb-4 w-64 md:w-72 rounded-2xl bg-white p-4 text-xs font-medium text-gray-800 shadow-xl md:text-sm pointer-events-auto origin-bottom-right ${isMobile ? "text-center mx-auto" : "text-right"
-                                        }`}
+                                    className={`hidden md:block mb-4 w-72 rounded-2xl bg-white p-4 text-sm font-medium text-gray-800 shadow-xl pointer-events-auto origin-bottom-right text-right`}
                                 >
                                     {persistentConfig.text}
                                 </motion.div>
