@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     title: "Sravya Majeti | Product Leader",
     description: "Senior Product Manager building 0→1 platforms for technology startups.",
     type: "website",
-    url: "https://sravyamajeti.com",
+    url: "https://productmama.dev/",
     siteName: "Sravya Majeti Portfolio",
   },
-  twitter: {
-    card: "summmarry_large_image",
-    title: "Sravya Majeti | Product Leader",
-    description: "Senior Product Manager building 0→1 platforms for technology startups.",
-  },
+  // twitter: {
+  //   card: "summmarry_large_image",
+  //   title: "Sravya Majeti | Product Leader",
+  //   description: "Senior Product Manager building 0→1 platforms for technology startups.",
+  // },
 };
 
 export default function RootLayout({
