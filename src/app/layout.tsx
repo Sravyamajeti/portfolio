@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Sravya Majeti | Product Leader",
-  description: "Senior Product Manager building 0→1 platforms for the Creator Economy & Fintech.",
+  description: "Senior Product Manager building 0→1 platforms for technology startups.",
 };
 
 export default function RootLayout({
