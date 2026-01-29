@@ -20,6 +20,18 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Sravya Majeti | Product Leader",
   description: "Senior Product Manager building 0→1 platforms for technology startups.",
+  openGraph: {
+    title: "Sravya Majeti | Product Leader",
+    description: "Senior Product Manager building 0→1 platforms for technology startups.",
+    type: "website",
+    url: "https://sravyamajeti.com",
+    siteName: "Sravya Majeti Portfolio",
+  },
+  twitter: {
+    card: "summmarry_large_image",
+    title: "Sravya Majeti | Product Leader",
+    description: "Senior Product Manager building 0→1 platforms for technology startups.",
+  },
 };
 
 export default function RootLayout({
