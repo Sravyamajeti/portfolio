@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import MemojiGuide from "@/components/MemojiGuide";
 import ResumeButton from "@/components/ResumeButton";
+import TableOfContents from "@/components/TableOfContents";
 import { motion } from "framer-motion";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Mail, Linkedin, Gamepad2, ArrowDown } from "lucide-react";
@@ -43,6 +44,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-neutral-50 text-neutral-900 font-sans">
       <ResumeButton />
+      <TableOfContents activeSection={activeSection} />
       <InteractiveBackground key={activeSection} activeSection={activeSection} />
       <MemojiGuide
         activeSection={activeSection}
@@ -52,10 +54,10 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section
         id="hero"
-        className="flex min-h-screen flex-col items-center justify-center px-4 text-center"
+        className="flex min-h-screen flex-col items-center justify-center px-4 text-center bg-emerald-50"
       >
         <div className="max-w-3xl space-y-6">
-          <h1 className="text-5xl font-extrabold tracking-tight md:text-7xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-2">
+          <h1 className="font-[family-name:var(--font-space-grotesk)] text-5xl font-extrabold tracking-tight md:text-7xl bg-gradient-to-r from-emerald-300 to-green-800 bg-clip-text text-transparent py-4 leading-relaxed overflow-visible">
             Building Products People Love
           </h1>
           <p className="text-xl text-neutral-600 md:text-2xl">
@@ -72,10 +74,10 @@ export default function Home() {
       </section>
 
       {/* 2. ABOUT SECTION */}
-      <section id="about" className="min-h-screen flex items-center justify-center px-4 py-24 relative overflow-hidden">
+      <section id="about" className="min-h-screen flex items-center justify-center px-4 py-24 relative overflow-hidden bg-purple-50">
         <div className="max-w-4xl mx-auto space-y-12 relative z-10">
           <div className="space-y-6 text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">The Engineer Who Speaks 'Business'</h2>
+            <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-purple-400 to-violet-700 bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">The Engineer Who Speaks 'Business'</h2>
             <p className="mx-auto max-w-2xl text-lg text-neutral-600 leading-relaxed">
               I hold a Dual Degree from IIT Kharagpur. My superpower is closing the loop between technical workflows and user delight.
             </p>
@@ -115,10 +117,10 @@ export default function Home() {
       {/* <WorkExperienceGrid /> */}
 
       {/* 4. VIBE CODING PROJECTS */}
-      <section id="vibecoding" className="min-h-screen bg-white px-4 py-24">
+      <section id="vibecoding" className="min-h-screen bg-orange-50 px-4 py-24">
         <div className="mx-auto max-w-5xl space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl font-bold md:text-5xl">Vibe Coding Projects</h2>
+            <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-orange-400 to-amber-700 bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">Vibe Coding Projects</h2>
             <p className="text-lg text-neutral-600">Building cool stuff with AI</p>
           </div>
 
@@ -131,7 +133,7 @@ export default function Home() {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-100 text-2xl">
                 🌙
               </div>
-              <h3 className="mb-2 text-2xl font-bold">Bedtime Stories App</h3>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] mb-2 text-2xl font-bold">Bedtime Stories App</h3>
               <p className="mb-6 text-neutral-600">
                 Built an end-to-end Bedtime stories app that emails a unique, AI-generated short story vetted by human to subscribers.
               </p>
@@ -163,7 +165,7 @@ export default function Home() {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-2xl">
                 ❓
               </div>
-              <h3 className="mb-2 text-2xl font-bold">Quizzing Platform</h3>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] mb-2 text-2xl font-bold">Quizzing Platform</h3>
               <p className="mb-6 text-neutral-600">
                 Developed quizzing platform for DMV test that generates different authentic questions everytime a user takes the quiz.
               </p>
@@ -202,11 +204,11 @@ export default function Home() {
       {/* 5. SOCIAL CAUSES */}
       <section
         id="social"
-        className="flex min-h-screen flex-col items-center justify-center bg-neutral-50 px-4 py-24"
+        className="flex min-h-screen flex-col items-center justify-center bg-pink-50 px-4 py-24"
       >
         <div className="max-w-4xl space-y-16 text-center w-full">
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold md:text-5xl">Social Causes & Volunteering</h2>
+            <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-pink-400 to-rose-700 bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">Social Causes & Volunteering</h2>
             <p className="mx-auto max-w-2xl text-lg text-neutral-600">
               Giving back to the community and empowering others.
             </p>
@@ -251,11 +253,11 @@ export default function Home() {
       {/* 6. HOBBIES */}
       <section
         id="hobbies"
-        className="flex min-h-screen flex-col items-center justify-center bg-white px-4 py-24"
+        className="flex min-h-screen flex-col items-center justify-center bg-sky-50 px-4 py-24"
       >
         <div className="max-w-4xl space-y-16 text-center w-full">
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold md:text-5xl">Beyond Work</h2>
+            <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-sky-300 to-blue-700 bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">Beyond Work</h2>
             <p className="mx-auto max-w-2xl text-lg text-neutral-600">
               Creative pursuits and sustainable living.
             </p>
@@ -292,7 +294,7 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center justify-center bg-neutral-900 px-4 text-center text-white"
       >
         <div className="max-w-2xl space-y-8">
-          <h2 className="text-4xl font-bold md:text-5xl">Ready to Chat?</h2>
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-neutral-100 to-white bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">Ready to Chat?</h2>
           <p className="text-xl text-neutral-400">Based in Fremont, California. Open to opportunities.</p>
 
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6 justify-center items-center">

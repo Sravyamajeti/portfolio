@@ -57,9 +57,9 @@ const experiences = [
 
 export default function WorkExperienceStack() {
     return (
-        <section id="work" className="relative min-h-screen bg-neutral-50 px-4 py-24">
+        <section id="work" className="relative min-h-screen bg-yellow-50 px-4 py-24">
             <div className="mx-auto max-w-5xl space-y-16">
-                <h2 className="text-center text-4xl font-bold md:text-5xl mb-24">
+                <h2 className="font-[family-name:var(--font-space-grotesk)] text-center text-4xl font-bold md:text-5xl mb-24 bg-gradient-to-r from-yellow-400 to-orange-700 bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">
                     Things I've Built
                 </h2>
 
@@ -123,7 +123,7 @@ function Card({
 
                     <div className="space-y-4 w-full">
                         <div>
-                            <h3 className="text-3xl font-bold text-neutral-900">{company}</h3>
+                            <h3 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-neutral-900">{company}</h3>
                             <p className={`text-md font-semibold ${textColor}`}>{role}</p>
                             {caption && (
                                 <p className="text-sm font-medium text-neutral-500 italic mt-1">{caption}</p>
