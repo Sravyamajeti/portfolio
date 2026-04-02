@@ -73,8 +73,8 @@ export default function WorkExperienceStack() {
                     Things I've Built
                 </h2>
 
-                {/* Stacking Container */}
-                <div className="relative">
+                {/* Stacking Container - Grid normalizes height so the sticky threshold is perfectly identical and they collapse together cleanly */}
+                <div className="grid gap-12" style={{ gridAutoRows: '1fr' }}>
                     {experiences.map((exp, i) => (
                         <Card key={i} {...exp} index={i} total={experiences.length} />
                     ))}
@@ -105,7 +105,7 @@ function Card({
 
     return (
         <div
-            className="sticky mb-12 flex flex-col justify-center"
+            className="sticky flex flex-col justify-start pb-8"
             style={{ top: `${topOffset}px`, zIndex: index + 1 }}
         >
             <motion.div
