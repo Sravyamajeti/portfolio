@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Mail, Linkedin, Gamepad2, ArrowDown } from "lucide-react";
 import WorkExperienceStack from "@/components/WorkExperienceStack";
-// import WorkExperienceGrid from "@/components/WorkExperienceGrid"; // Old implementation fallback
+import MyStack from "@/components/MyStack";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -61,7 +61,8 @@ export default function Home() {
             Building Products People Love
           </h1>
           <p className="text-xl text-neutral-600 md:text-2xl">
-            A customer-obsessed Senior PM with 9+ years of experience, combining "vibe coding" creativity with proven 0 -&gt; 1 execution to scale platforms          </p>
+            A startup product leader with 10 years under my belt, successfully owning 0→1 launches and scaling products. I blend my passion for "vibe coding" with a fierce focus on data-driven strategy and shipping agentic workflows that reduce manual effort by up to 42%.
+          </p>
           <div className="inline-block rounded-full bg-neutral-200 px-4 py-1.5 text-sm font-semibold text-neutral-700">
             Strategy | AI | Innovation | Leadership
           </div>
@@ -93,8 +94,8 @@ export default function Home() {
               <div className="text-sm text-neutral-600 font-medium">Active Users Impacted</div>
             </div>
             <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-neutral-100">
-              <div className="text-4xl font-bold text-pink-600 mb-2">80%</div>
-              <div className="text-sm text-neutral-600 font-medium">Client Retention Rate</div>
+              <div className="text-4xl font-bold text-pink-600 mb-2">42%</div>
+              <div className="text-sm text-neutral-600 font-medium">Manual Effort Reduced</div>
             </div>
           </div>
 
@@ -137,12 +138,12 @@ export default function Home() {
               <p className="mb-6 text-neutral-600">
                 Built an end-to-end Bedtime stories app that emails a unique, AI-generated short story vetted by human to subscribers.
               </p>
-              <div className="flex flex-wrap gap-2 mb-8">
+              {/* <div className="flex flex-wrap gap-2 mb-8">
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Next.js</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">OpenAI</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Resend</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Supabase</span>
-              </div>
+              </div> */}
               <a
                 href="https://bedtimestories.productmama.dev/"
                 target="_blank"
@@ -169,12 +170,12 @@ export default function Home() {
               <p className="mb-6 text-neutral-600">
                 Developed quizzing platform for DMV test that generates different authentic questions everytime a user takes the quiz.
               </p>
-              <div className="flex flex-wrap gap-2 mb-8">
+              {/* <div className="flex flex-wrap gap-2 mb-8">
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Antigravity</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Vercel</span>
                 <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">NotebookLM</span>
-                {/* <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Strapi</span> */}
-              </div>
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Strapi</span>
+              </div> */}
               <a
                 href="https://dmv-practice-quiz.vercel.app/"
                 target="_blank"
@@ -187,19 +188,72 @@ export default function Home() {
               <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-red-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
               <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-green-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
             </motion.div>
-          </div>
 
-          {/* Tools Marquee or List */}
-          <div className="text-center space-y-6 pt-8">
-            <p className="font-semibold text-neutral-500 uppercase tracking-widest text-sm">Tools</p>
-            <div className="flex flex-wrap justify-center gap-4 opacity-70">
-              {["Antigravity", "Vercel", "Resend", "OpenAI API", "NotebookLM", "Supabase", "Cursor", "Github", "Strapi", "Google Search Console", "Google Analytics"].map((tool) => (
-                <span key={tool} className="text-neutral-800 font-medium text-lg px-4">{tool}</span>
-              ))}
-            </div>
+            {/* Project 3 */}
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-3xl bg-neutral-50 p-8 transition-all hover:shadow-xl border border-neutral-100"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 text-2xl">
+                🤖
+              </div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] mb-2 text-2xl font-bold">Learnflow AI Tutor</h3>
+              <p className="mb-6 text-neutral-600">
+                Built a minimalistic conversational Socratic AI tutor app that incorporates agentic workflows for an enhanced learning experience.
+              </p>
+              {/* <div className="flex flex-wrap gap-2 mb-8">
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Antigravity</span>
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Next.js</span>
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">OpenAI</span>
+              </div> */}
+              <a
+                href="https://gamma.app/docs/Personalized-Socratic-AI-Tutor-5nepnv3qyt2yskf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-sm font-bold text-neutral-900 group-hover:underline"
+              >
+                Case study <span className="ml-1">→</span>
+              </a>
+
+              <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-purple-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+              <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-indigo-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+            </motion.div>
+
+            {/* Project 4 */}
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-3xl bg-neutral-50 p-8 transition-all hover:shadow-xl border border-neutral-100"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-2xl">
+                🛒
+              </div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] mb-2 text-2xl font-bold">Costco Price Tracker</h3>
+              <p className="mb-6 text-neutral-600">
+                Automated a robust Costco Sameday tracker that monitors watchlist items and past orders and emails daily price drop alerts for 30-day price protection!
+              </p>
+              {/* <div className="flex flex-wrap gap-2 mb-8">
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Antigravity</span>
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Node.js</span>
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium">Puppeteer</span>
+              </div> */}
+              <a
+                href="https://github.com/Sravyamajeti/costco_alerts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-sm font-bold text-neutral-900 group-hover:underline"
+              >
+                GitHub <span className="ml-1">→</span>
+              </a>
+
+              <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-emerald-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+              <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-teal-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* MY STACK */}
+      <MyStack />
 
       {/* 5. SOCIAL CAUSES */}
       <section
@@ -295,7 +349,7 @@ export default function Home() {
       >
         <div className="max-w-2xl space-y-8">
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-5xl bg-gradient-to-r from-neutral-100 to-white bg-clip-text text-transparent py-3 leading-relaxed overflow-visible">Ready to Chat?</h2>
-          <p className="text-xl text-neutral-400">Based in Fremont, California. Open to opportunities.</p>
+          <p className="text-xl text-neutral-400">Based in SF Bay Area, California. Open to opportunities.</p>
 
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6 justify-center items-center">
             <a

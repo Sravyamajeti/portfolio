@@ -1,46 +1,52 @@
-Sravya Majeti
-Fremont, CA | sravya.iitkgp@gmail.com | Linkedin| +1(408)333-8088 | L2-S Visa
+SF Bay Area, California • +1 (408) 333-8088 • sravya.iitkgp@gmail.com • Linkedin • Portfolio
 Summary
-Startup product leader with 9+ years of experience owning 0→1 launches and scaling consumer and creator platforms. Strong execution focus with deep experience in data-driven strategy, rapid experimentation, technical workflows, and cross-functional collaboration.
-Experience
-• Senior Product Manager | Only Much Louder | Aug 2022 – Jul 2025
-Seed-funded SaaS startup streamlining end-to-end influencer marketing and creator workflows.
-◦ 0→1 Product: Spearheaded SaaS platform from concept to $800K ARR with 80% client retention
-◦ AI Applications: Built in-house NSFW brand safety transformer using Falcon 7B model and launched
-GenAI-based natural language querying to revolutionize creator discovery experience.
-◦ Operational Scalability: Designed and owned internal self-service onboarding tool for CSMs, reducing
-account setup time by 40% and removing 100% developer dependancy
-◦ Governance & Compliance: Instrumental in making the company GDPR and ISO compliant, aligning
-with global safety standards for user data.
-◦ Execution Excellence: Received ”Best Performer” award for 2 consecutive years for exceptional ownership
-◦ Led a cross-functional team of 15+, including Product Managers, Engineers, QA, and Designers
-• Product Manager | ProAlley | Apr 2021 – Aug 2022
-B2C EdTech startup focusing on professional upskilling via on-demand and live interactive classes
-◦ Platform Launch: Sole PM to launch the entire learner experience (pre-purchase, course start to completion) for 14 courses, with 2 pricing plans.
-◦ Internal Efficiency: Built a robust Content Management System (CMS)→ removed 100% of developer dependency for course launch
-◦ Strategic Planning: Instrumental in creating the Annual Operating Plan (AOP) presented to the board, including Product Roadmap, financials, and projections.
-◦ Organic Growth: Led SEO initiatives that improved organic search visibility by 25% and TOFU traffic
-• Product Manager | Nuclei | Aug 2018 – Feb 2021
-Bootstrapped fintech B2B2C startup empowering financial institutions to build super-app ecosystems
-◦ Product-Led Growth: Launched Recharge, Credit Score, Donations, Bill Payments, DigiGold — driving 50% of company revenue with detailed PRDs
-◦ Fulfillment Efficiency: Built Smart Vendor Routing to optimize success rates→ increased revenue by 35%
-◦ Global Expansion: Internationalized SDK modules to expand platform reach into foreign markets.
-◦ User Research: Conducted studies to identify pain points, shaping the product for a 1.5M user launch.
-◦ Access Controls: Introduced Role-Based Access Control (RBAC) and user management in the customer
-support dashboard, ensuring secure and efficient data access.
-◦ Crisis Response: Reacted quickly during Covid-19 to add donation modules, raising $150K in 2 months
-◦ Led teams of 20+ including Engineers, Analysts, QA, Designers
-• Business Analyst | Ola Cabs | Jun 2016 – Aug 2018 Ride-hailing giant handling millions of daily transactions.
-◦ Intent-Based Targeting: Conceptualized a cross-selling algorithm → 15% growth in bookings.
-◦ Market Entry: Analyzed demand for ”Micro Rentals” across 3 cities→ captured 20% of city bookings ◦ Cost Optimization: Reduced repeat coupon burn by 15% by targeting exclusively first-time users
-◦ Experimentation: Led A/B testing initiatives to increase driver partner login hours→ 20% increase.
-Education
-• Indian Institute of Technology, Kharagpur |Dual Degree, Biotech CGPA 8.26 | 2011-2016 ◦ Ranked in top 1% in IIT-JEE and top 0.5% in AIEEE nationwide entrance examinations
-Vibecoding Projects
-• Built an end-to-end Bedtime stories app that emails a unique, AI-generated short story to subscribers • Developed quizzing platform that generates different questions everytime a user takes the test on app
-• Tools: Antigravity, Vercel, Resend, Openai API, NotebookLM, Supabase, Cursor, Github, Strapi, GSC
-Volunteering
-• Admin of UPAY NGO, Bangalore center. Responsible for hiring Interns, Procurement of items, CSR activities • Worked as Director, Expansion for Feed India NGO to create a network of donors, NGOs and recipients
-• Mentored a group of aspiring PMs in a case study from IIM Sirmaur in Creators of Products Community
-• Elected as General Secretary, Technology for SN/ IG Hall and handled 8 interhall events
-     
+Product leader with 10 years of experience building platforms from zero to scale, owning product strategy and go-to-market
+execution. Managed product lines with $800K ARR. Shipped GenAI search, NLP-based querying, and agentic workflows that
+reduced manual effort by 27–42%. Led cross-functional teams of 25 across product, engineering, design, legal, and support.
+EXPERIENCE
+Publlish (Social Media content scheduling and analytics tool for agencies and creators) Sep 2025–Present
+Senior Product Manager
+• Introduced AI-powered captioning with tone-matching capabilities and batch publish, reducing time to post by 26%.
+• Developed a collaborative content approval module, improving agency-brand coordination efficiency by 34%
+Only Much Louder - OML (India’s best influencer marketing agency) Aug 2022–Jul 2025
+Senior Product Manager
+• Founding PM for Hypothesis SaaS vertical. Owned 0 to 1 strategy, roadmap, execution, and revenue growth. Led 15-members
+• Drove 54% net newclient growth and 100% cross-sell penetration by defining and launching a Creator Discovery platform
+for brands and agencies. Set end-to-end product vision, competitive pricing, roadmap, data pipelines.
+• Boosted creator search usage by 63% and slashed related support queries by 42% by introducing GenAI-based natural
+language querying to simplify the creator discovery experience and empowered non-technical users to find niche talent.
+• Optimized manual creator vetting by 27% by launching an in-house NSFW brand safety transformer flagging 5 key
+parameters, automating the risk-assessment pipeline and enabling brands to select quality, brand-safe creators.
+• Automated onboarding workflows (100% eliminated dev bottlenecks) and led to 37% reduction in account setup time.
+• Spearheaded company-wide GDPR and ISO compliance initiative, aligning 7 internal/external teams.
+• Received "Best Performer" award for 2 consecutive years for consistently driving Hypothesis topline growth.
+ProAlley by Aptech (India’s largest multimedia coaching company) Apr 2021–Aug 2022
+Product Manager
+• Led 10 member team across engineering, design, support, social media to launch the entire learner experience
+• Defined prioritized roadmap via user research, JTBD synthesis to ship differentiators (a) Live Mentor sessions, (b) Async
+query resolution with tutor. Delivered 100% satisfaction to premium users.
+• Streamlined a robust Content Management System (CMS) and removed 100% developer dependency for course launch.
+• Led SEO initiatives that improved organic search visibility by 23% and TOFU traffic reducing CAC.
+Nuclei (India’s top banking aggregator enabling banks to become super apps) Aug 2018–Feb 2021
+Product Manager
+• Accelerated promotion from APM to PM. Primary stakeholder managing enterprise banking partners, directed team of 25
+• Launched Recharge, Credit Score, Donations, Bill Payments, DigiGold contributing to 53% of company revenue.
+• Engineered Smart Vendor Routing to optimize recharge success rates which increased revenue by 32%.
+• Conducted user studies to identify pain points, shaping the product for a 1.5M user launch.
+• Pioneered a Donations module during Covid-19, shipped in record time of 2 weeks and raised $151K in 2 months.
+Ola Cabs (India’s biggest competitor to Uber) Jun 2016–Aug 2018
+Product Analyst
+• Grew rentals by 17% by designing an intent-based cross-sell algorithm, applying behavioral analytics across 100K rides.
+• Reduced coupon burn by 22% by introducing a feature to target first-time rental users in coupon dashboard.
+• Boosted driver peak login hours by 20% by strategically nudging segmented drivers. Ran A/B tests before full launch.
+EDUCATION
+Indian Institute of Technology, Kharagpur (India’s top engineering college with admission rate of 1%) 2011-2016
+INDEPENDENT PROJECTS
+• Deployed an end-to-end Bedtime stories app that emails a unique, AI-generated short story to subscribers.
+• Developed quizzing platform that generates different questions everytime a user takes the test on app.
+• Built a minimalistic conversational Socratic AI tutor app Learnflow and incorporated agentic workflows. Case. Github
+• Tools: Antigravity, Cursor, Replit, Vercel, Github, OpenAI, Gemini, Claude. Analytics: SQL, R, GA, Metabase, Mixpanel
+VOLUNTEERING
+• Admin of UPAY NGO, Bangalore center. Managed hiring Interns, Procurement of items, CSR activities.
+• Directed the expansion for Feed India NGO to create a network of donors, NGOs and recipients.
+• Mentored a group of aspiring PMs in a case study from IIM Sirmaur in Creators of Products Community.
