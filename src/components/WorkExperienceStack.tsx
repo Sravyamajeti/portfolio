@@ -5,10 +5,22 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const experiences = [
     {
+        company: "Qure.ai",
+        emojis: ["🩺", "☁️"],
+        role: "Product Consultant | Jun 2026 – Present",
+        caption: "CTO’s Office, New AI Initiatives (Global AI healthcare streamlining radiology workflows and patient care)",
+        description: "At the CTO’s Office driving New AI Initiatives, I'm currently building a node-based, deterministic clinical workflow builder for patient routing that uses LLMs to extract unstructured data, cutting site configuration time by 70% and removing developer dependency. I also architected a standalone qTrack demo CMS that bypasses live APIs, speeding up patient story creation by 67%, and launched an automated pitch deck tool that cut the Business Development team's presentation prep time by 48%.",
+        color: "bg-teal-100",
+        hoverColor: "group-hover:bg-teal-200",
+        textColor: "text-teal-600",
+        accent: "bg-teal-500",
+    },
+    {
         company: "Publlish",
-        role: "Product Consultant| Sep 2025 – Present",
+        emojis: ["🎬"],
+        role: "Senior Product Manager | Sep 2025 – May 2026",
         caption: "Social Media content scheduling and analytics tool for agencies and creators",
-        description: "Taking on the role of Product Consultant at Publlish, I've been shaping an intuitive content scheduling and analytics tool designed for modern creators. I introduced an amazing AI-powered captioning feature with tone-matching and batch-publishing capabilities, saving folks 26% of their time spent posting. I also brought teams closer together by developing a collaborative content approval module that boosted agency-brand coordination efficiency by a fantastic 34%!",
+        description: "At Publlish, I shaped an intuitive content scheduling and analytics tool designed for modern creators. I introduced an AI-powered captioning feature with tone-matching and batch-publishing capabilities, saving creators 26% of their time spent posting. I also brought teams closer together by developing a collaborative content approval module that boosted agency-brand coordination efficiency by 34%!",
         color: "bg-emerald-100",
         hoverColor: "group-hover:bg-emerald-200",
         textColor: "text-emerald-600",
@@ -16,6 +28,7 @@ const experiences = [
     },
     {
         company: "Only Much Louder",
+        emojis: ["🎬", "☁️"],
         role: "Senior Product Manager | Aug 2022 – Jul 2025",
         caption: "SaaS platform (Hypothesis) streamlining end-to-end influencer marketing and creator workflows",
         // achievements: [
@@ -24,7 +37,7 @@ const experiences = [
         //         detail: "Drove the platform from concept to significant revenue by solving critical marketer pain points.",
         //     }
         // ],
-        description: "Spearheaded our SaaS platform from mere concept to $800K ARR, drove 54% net new client growth and 100% cross-sell penetration. I dove deep into AI, building an in-house NSFW brand safety transformer evaluating 5 key parameters that optimized manual creator vetting by 27%. Our GenAI natural language search revolutionized creator discovery, boosting search usage by 63% and slashing support queries by 42%. Beyond the product surface, I focused on operational scalability by designing a self-serve onboarding tool that cut account setup times by 37% without needing a single developer. Ran a squad of 15 brilliant folks and achieved 'Best Performer' two years in a row!",
+        description: "As founding PM, I took our SaaS platform from concept to $800K ARR and led a squad of 15. I launched a Creator Discovery platform indexing 350M+ creators, which drove 54% net new client growth. I shipped GenAI natural language search, which raised search usage by 63% and cut support queries by 42%, plus an in-house NSFW brand safety model that reduced manual vetting by 27%. Named 'Best Performer' two years in a row!",
         color: "bg-purple-100",
         hoverColor: "group-hover:bg-purple-200",
         textColor: "text-purple-600",
@@ -32,10 +45,11 @@ const experiences = [
     },
     {
         company: "ProAlley",
+        emojis: ["🎓"],
         role: "Product Manager | Apr 2021 – Aug 2022",
-        caption: "EdTech startup focusing on professional upskilling",
+        caption: "EdTech startup focusing on professional upskilling (by Aptech)",
         description:
-            "Built and launched the entire learner experience from the ground up, delivered 100% satisfaction to our premium users. I led a 10-member team across engineering, design, and support, shipping key differentiators like live mentor sessions and async query resolutions based on deep JTBD synthesis. To keep our team moving fast, I streamlined a robust Content Management System that completely eliminated developer dependency for new course launches. I also rolled out SEO initiatives that successfully boosted our organic visibility by 23% and reduced CAC.",
+            "Built and launched the entire learner experience from the ground up, delivered 100% satisfaction to our premium users. I led a 10-member team across engineering, design, and support, shipping key differentiators like live mentor sessions and async query resolutions based on deep JTBD synthesis. To keep our team moving fast, I streamlined a robust Content Management System that completely eliminated developer dependency for new course launches.",
         color: "bg-indigo-100",
         hoverColor: "group-hover:bg-indigo-200",
         textColor: "text-indigo-600",
@@ -43,10 +57,11 @@ const experiences = [
     },
     {
         company: "Nuclei",
+        emojis: ["☁️"],
         role: "Product Manager | Aug 2018 – Feb 2021",
         caption: "Bootstrapped fintech B2B2C startup empowering financial institutions to build super-app ecosystems",
         description:
-            "I drove our product-led growth by launching key modules like Recharge, Credit Score, and Bill Payments, which ultimately contributed to 53% of company revenue. A technical challenge was building our 'Smart Vendor Routing' system, a move that optimized fulfillment success rates and bumped revenue by 32%. I scaled our platform for a massive 1.5M user launch through meticulous user research, and even swiftly introduced a Covid-19 donation module that went on to raise $151K in just 2 months.",
+            "I drove product-led growth by launching key modules like Recharge, Credit Score, Donations, and Bill Payments, which ultimately contributed to 53% of company revenue. Engineered 'Smart Vendor Routing' to optimize recharge fulfillment success rates which bumped revenue by 32%. I scaled our platform for a massive 1.5M user launch through meticulous user research, and swiftly introduced a Covid-19 donation module that went on to raise $151K in just 2 months.",
         color: "bg-blue-100",
         hoverColor: "group-hover:bg-blue-200",
         textColor: "text-blue-600",
@@ -54,10 +69,11 @@ const experiences = [
     },
     {
         company: "Ola Cabs",
-        role: "Business Analyst | Jun 2016 – Aug 2018",
+        emojis: ["🚕"],
+        role: "Product Analyst | Jun 2016 – Aug 2018",
         caption: "Ride-hailing giant handling millions of daily transactions",
         description:
-            "Diving into the fast-paced world of ride-hailing, I dug into massive commuter datasets to find hidden opportunities. I grew rentals by 17% by conceptualizing an intent-based cross-sell algorithm applying behavioral analytics across 100K rides. By boosting driver peak login hours by 20% by strategically nudging segmented drivers, I helped the business scale efficiently while running rigorous A/B tests before full launches.",
+            "Diving into the fast-paced world of ride-hailing, I dug into massive commuter datasets to find hidden opportunities. I grew rentals by 17% by conceptualizing an intent-based cross-sell algorithm applying behavioral analytics across 100K rides. By reducing coupon burn by 22% through targeted dashboards for first-time renters, and boosting driver peak login hours by 20% by strategically nudging segmented drivers, I helped the business scale efficiently while running rigorous A/B tests before full launches.",
         color: "bg-orange-100",
         hoverColor: "group-hover:bg-orange-200",
         textColor: "text-orange-600",
@@ -89,6 +105,7 @@ export default function WorkExperienceStack() {
 
 function Card({
     company,
+    emojis,
     role,
     caption,
     description,
@@ -133,7 +150,16 @@ function Card({
 
                     <div className="space-y-4 w-full">
                         <div>
-                            <h3 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-neutral-900">{company}</h3>
+                            <div className="flex items-center gap-2.5">
+                                <h3 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-neutral-900">{company}</h3>
+                                {emojis && (
+                                    <span className="flex items-center gap-1 text-lg select-none">
+                                        {emojis.map((emoji: string, idx: number) => (
+                                            <span key={idx}>{emoji}</span>
+                                        ))}
+                                    </span>
+                                )}
+                            </div>
                             <p className={`text-md font-semibold ${textColor}`}>{role}</p>
                             {caption && (
                                 <p className="text-sm font-medium text-neutral-500 italic mt-1">{caption}</p>

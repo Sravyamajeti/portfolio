@@ -10,6 +10,15 @@ import { Mail, Linkedin, Gamepad2, ArrowDown } from "lucide-react";
 import WorkExperienceStack from "@/components/WorkExperienceStack";
 import MyStack from "@/components/MyStack";
 
+// Small floating emojis in the hero showcasing industry experience
+const industryEmojis = [
+  { emoji: "🩺", label: "Healthcare", position: "top-[18%] left-[12%]", duration: 5, delay: 0 },
+  { emoji: "☁️", label: "SaaS", position: "top-[22%] right-[14%]", duration: 6, delay: 0.8 },
+  { emoji: "🎓", label: "EdTech", position: "top-[50%] left-[9%]", duration: 5.5, delay: 1.6 },
+  { emoji: "🚕", label: "Ride Hailing", position: "top-[56%] right-[14%]", duration: 6.5, delay: 1.2 },
+  { emoji: "🎬", label: "Creator Tech", position: "bottom-[18%] left-[20%]", duration: 4.5, delay: 0.4 },
+];
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -54,14 +63,33 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section
         id="hero"
-        className="flex min-h-screen flex-col items-center justify-center px-4 text-center bg-emerald-50"
+        className="relative overflow-hidden flex min-h-screen flex-col items-center justify-center px-4 text-center bg-emerald-50"
       >
-        <div className="max-w-3xl space-y-6">
+        {/* Floating industry emojis */}
+        {industryEmojis.map((item) => (
+          <motion.div
+            key={item.label}
+            title={item.label}
+            aria-label={item.label}
+            role="img"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [0, -10, 0] }}
+            transition={{
+              opacity: { duration: 0.8, delay: item.delay },
+              y: { duration: item.duration, delay: item.delay, repeat: Infinity, ease: "easeInOut" },
+            }}
+            className={`absolute ${item.position} hidden md:block text-3xl select-none`}
+          >
+            {item.emoji}
+          </motion.div>
+        ))}
+
+        <div className="relative z-10 max-w-3xl space-y-6">
           <h1 className="font-[family-name:var(--font-space-grotesk)] text-5xl font-extrabold tracking-tight md:text-7xl bg-gradient-to-r from-emerald-300 to-green-800 bg-clip-text text-transparent py-4 leading-relaxed overflow-visible">
             Building Products People Love
           </h1>
           <p className="text-xl text-neutral-600 md:text-2xl">
-            A startup product leader with 10 years under my belt, successfully owning 0→1 launches and scaling products. I blend my passion for "vibe coding" with a fierce focus on data-driven strategy and shipping agentic workflows that reduce manual effort by up to 42%.
+            An AI-native product leader with 10 years under my belt, successfully owning 0→1 launches and scaling platforms. I blend my passion for "vibe coding" with a fierce focus on data-driven strategy and shipping agentic workflows that reduce manual effort by up to 67%.
           </p>
           <div className="inline-block rounded-full bg-neutral-200 px-4 py-1.5 text-sm font-semibold text-neutral-700">
             Strategy | AI | Innovation | Leadership
@@ -94,7 +122,7 @@ export default function Home() {
               <div className="text-sm text-neutral-600 font-medium">Active Users Impacted</div>
             </div>
             <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-neutral-100">
-              <div className="text-4xl font-bold text-pink-600 mb-2">42%</div>
+              <div className="text-4xl font-bold text-pink-600 mb-2">67%</div>
               <div className="text-sm text-neutral-600 font-medium">Manual Effort Reduced</div>
             </div>
           </div>
@@ -125,7 +153,27 @@ export default function Home() {
             <p className="text-lg text-neutral-600">Building cool stuff with AI</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Project: Cuepen */}
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-3xl bg-neutral-50 p-8 transition-all hover:shadow-xl border border-neutral-100"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl">
+                ✍️
+              </div>
+              <h3 className="font-[family-name:var(--font-space-grotesk)] mb-2 text-2xl font-bold">Cuepen</h3>
+              <p className="mb-6 text-neutral-600">
+                Launched Cuepen, an AI-powered test preparation tool focused on writing assessments with automated evaluation and feedback.
+              </p>
+              <span className="inline-block rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 border border-blue-200">
+                AI Test Prep
+              </span>
+
+              <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-blue-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+              <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-cyan-100 opacity-0 transition-all blur-xl group-hover:opacity-50" />
+            </motion.div>
+
             {/* Project 1 */}
             <motion.div
               whileHover={{ y: -5 }}
