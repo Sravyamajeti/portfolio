@@ -18,7 +18,7 @@ const experiences = [
     {
         company: "Publlish",
         emojis: ["🎬"],
-        role: "Senior Product Manager | Sep 2025 – May 2026",
+        role: "Product Consultant | Sep 2025 – May 2026",
         caption: "Social Media content scheduling and analytics tool for agencies and creators",
         description: "At Publlish, I shaped an intuitive content scheduling and analytics tool designed for modern creators. I introduced an AI-powered captioning feature with tone-matching and batch-publishing capabilities, saving creators 26% of their time spent posting. I also brought teams closer together by developing a collaborative content approval module that boosted agency-brand coordination efficiency by 34%!",
         color: "bg-emerald-100",
